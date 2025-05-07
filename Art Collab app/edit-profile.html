@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Your Profile</h2>
+        <form id="editProfileForm">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" placeholder="Enter your bio"></textarea>
+
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills" placeholder="e.g., Painter, Musician" />
+
+            <label for="profilePic">Profile Picture URL:</label>
+            <input type="url" id="profilePic" placeholder="Paste image link here" />
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+    <script type="module" src="js/edit-profile.js"></script>
+</body>
+</html>
