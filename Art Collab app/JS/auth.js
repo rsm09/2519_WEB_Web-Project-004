@@ -18,7 +18,7 @@ if (signupForm) {
                 skills: "",
                 profilePic: ""
             });
-            window.location.href = "login.html";
+            window.location.href = "index.html";
         } catch (error) {
             console.error(error.message);
         }
