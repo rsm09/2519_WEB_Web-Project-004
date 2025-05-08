@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Post</title>
+  <link rel="stylesheet" href="css/post.css" />
+</head>
+<body>
+  <div class="container">
+    <main>
+      <h2>Edit Post</h2>
+      <form id="editPostForm">
+        <input type="text" id="editTitle" placeholder="Title" required />
+        <textarea id="editCaption" placeholder="Caption" required></textarea>
+        <input type="text" id="editTags" placeholder="Hashtags" />
+        <input type="text" id="editImage" placeholder="Image URL" />
+        <button type="submit">Update Post</button>
+      </form>
+    </main>
+  </div>
+  <script type="module" src="js/edit-post.js"></script>
+</body>
+</html>

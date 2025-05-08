@@ -31,7 +31,7 @@ onAuthStateChanged(auth, async (user) => {
             try {
                 await updateDoc(userRef, { name,bio, skills, profilePic });
                 alert("Profile updated!");
-                window.location.href = "profile.html";
+                window.location.href = "userspace.html";
             } catch (err) {
                 console.error("Error updating profile:", err.message);
             }
@@ -39,6 +39,6 @@ onAuthStateChanged(auth, async (user) => {
 
     } else {
         // Redirect if not logged in
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     }
 });

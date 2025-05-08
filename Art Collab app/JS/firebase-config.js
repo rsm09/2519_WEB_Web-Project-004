@@ -1,7 +1,7 @@
  // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-import { getFirestore, doc, setDoc,getDoc,updateDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged,signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+import { getFirestore, doc, setDoc,getDoc,updateDoc,Timestamp,addDoc,collection, query, where, getDocs, deleteDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,4 +22,4 @@ import { getFirestore, doc, setDoc,getDoc,updateDoc } from "https://www.gstatic.
   const auth = getAuth(app);
   const db = getFirestore(app);
 
-  export { auth, db, createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged, setDoc, doc,getDoc,updateDoc };
+  export { auth, db, createUserWithEmailAndPassword, signInWithEmailAndPassword,onAuthStateChanged, setDoc, doc,getDoc,updateDoc,Timestamp,addDoc,collection, query, where, getDocs,deleteDoc, arrayUnion,signOut };

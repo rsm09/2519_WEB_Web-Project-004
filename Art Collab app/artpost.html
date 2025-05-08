@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard - ART Collab App</title>
+  <title>My ArtPosts - ART Collab App</title>
   <link rel="stylesheet" href="css/spacestyle.css" />
 </head>
 <body>
@@ -27,21 +27,17 @@
 
   <div class="container">
     <aside>
-      <a href="userspace.html">My Space</a>
+     <a href="userspace.html">My Space</a>
       <a href="create-post.html">➕ Create New Project</a>
       <a href="chats.html">💬 Chats</a>
       <a href="portfolio.html">🎨 Portfolio</a>
-      <a href="artpost.html">📝 ArtPost</a>
+      <a href="artpost.html" class="active">📝 ArtPost</a>
     </aside>
 
     <main>
-      <div class="feed-controls">
-        <button onclick="window.location.href='create-post.html'">Create Post</button>
-        <input type="text" id="searchInput" placeholder="Search by user or #hashtag" />
-        <button id="searchBtn">Search</button>
-      </div>
-      <div id="postFeed" class="post-feed">
-        <!-- Posts will load here -->
+      <h2>Your Posts</h2>
+      <div id="myPosts" class="post-feed">
+        <!-- User's own posts with edit/delete buttons -->
       </div>
     </main>
   </div>
@@ -50,8 +46,10 @@
     <p>&copy; 2025 ART Collab App</p>
     <button id="signoutBtn">Sign Out</button>
   </footer>
-
-  <script type="module" src="js/userspace.js"></script>
+  
   <script type="module" src="js/artpost.js"></script>
+  
+  
+  <!-- <script type="module" src="js/userspace.js"></script> -->
 </body>
 </html>

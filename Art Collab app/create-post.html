@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Post</title>
+ <link rel="stylesheet" href="css/post.css">
+</head>
+<body>
+  <div class="container">
+    <main>
+      <h2>Create Post</h2>
+      <form id="createPostForm">
+        <input type="text" id="postTitle" placeholder="Title" required />
+        <textarea id="postCaption" placeholder="Caption" required></textarea>
+        <input type="text" id="postTags" placeholder="Hashtags (comma-separated)" />
+        <input type="text" id="postImage" placeholder="Image URL (optional)" />
+        <button type="submit">Post</button>
+      </form>
+    </main>
+  </div>
+  <script type="module" src="js/create-post.js"></script>
+</body>
+</html>
