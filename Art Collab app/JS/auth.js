@@ -20,6 +20,7 @@ if (signupForm) {
             });
             window.location.href = "index.html";
         } catch (error) {
+            alert(error.message)
             console.error(error.message);
         }
     });
@@ -38,6 +39,7 @@ if (loginbtn) {
             const user = userCredential.user;
             window.location.href = "userspace.html";
         } catch (error) {
+            alert(error.message)
             console.error(error.message);
         }
     });

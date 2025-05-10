@@ -21,12 +21,11 @@ onAuthStateChanged(auth, async (user) => {
             console.error("Error fetching user data:", err.message);
         }
     } else {
-        // Not logged in — redirect to login page
-        window.location.href = "index.html.html";
+        window.location.href = "index.html";
     }
 });
 
-// Redirect to edit-profile.html
+
 document.getElementById("editProfileBtn").addEventListener("click", () => {
     window.location.href = "edit-profile.html";
 });

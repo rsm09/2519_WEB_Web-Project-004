@@ -1,6 +1,6 @@
 import { auth, db,doc, getDoc, updateDoc,onAuthStateChanged  } from "./firebase-config.js";
 
-// Assuming postId is passed in URL as ?id=abc123
+
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("id");
 console.log(postId)
@@ -27,7 +27,8 @@ onAuthStateChanged(auth, async (user) => {
                         hashtags: document.getElementById("editTags").value,
                         imageUrl: document.getElementById("editImage").value,
                     });
-                    window.location.href = "artpost.html"; // After editing
+                    alert("Post edited!");
+                    window.location.href = "artpost.html"; 
                 } catch (err) {
                     console.error("Error updating post:", err.message);
                 }
