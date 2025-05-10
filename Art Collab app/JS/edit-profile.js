@@ -38,7 +38,7 @@ onAuthStateChanged(auth, async (user) => {
         });
 
     } else {
-        // Redirect if not logged in
+        
         window.location.href = "index.html";
     }
 });

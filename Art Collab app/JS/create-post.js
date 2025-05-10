@@ -15,10 +15,12 @@ onAuthStateChanged(auth, (user) => {
             try {
                 const docSnap = await getDoc(userRef);
                 const data = docSnap.data();
+                console.log(data)
                 await addDoc(collection(db, "posts"), {
                     userId: user.uid,
                     name:data.name,
                     profile:data.profilePic,
+                    mail:data.email,
                     title,
                     caption,
                     hashtags,

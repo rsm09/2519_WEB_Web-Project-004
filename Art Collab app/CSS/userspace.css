@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Body Styling === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f3f0;
+  color: #1f2937;
+}
+
+/* === Header Styling === */
+.dashboard-header {
+  background-color: #ede9fe;
+  color: #4c1d95;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+}
+
+.header-left img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #c4b5fd;
+}
+
+.header-left a {
+  color: #4c1d95;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* === Container Layout === */
+.container {
+  display: flex;
+  min-height: 80vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* === Sidebar === */
+aside {
+  width: 220px;
+  background-color: #ede9fe;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+aside a {
+  text-decoration: none;
+  color: #4c1d95;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+aside a:hover {
+  color: #6b21a8;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+/* === Main Feed Area === */
+main {
+  flex-grow: 1;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.feed-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.feed-controls input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.feed-controls button {
+  padding: 10px 16px;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.feed-controls button:hover {
+  background-color: #6b21a8;
+}
+
+/* === Footer === */
+footer {
+  padding: 15px;
+  text-align: center;
+  background-color: #ede9fe;
+  border-top: 1px solid #e5e7eb;
+  color: #4c1d95;
+  margin-top: 30px;
+}
+
+footer button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #f87171;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background-color: #dc2626;
+}
+
+/* === Feed Container === */
+.post-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #f9f7f4;
+}
+
+/* === Post Card === */
+.post {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+
+
+/* === Post Header === */
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.post-user-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-user-name {
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  margin: 0;
+}
+
+.post-user-name:hover {
+  color: #6a4c93;
+}
+
+.post-title {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 0.2rem;
+}
+
+/* === Caption & Image === */
+.post-caption {
+  margin: 1rem 0;
+  color: #444;
+  line-height: 1.4;
+}
+
+.post-image {
+  max-width: 400px;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+/* === Hashtags === */
+.post-hashtags {
+  color: #6a4c93;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* === Comments Section === */
+.comments-section {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.existing-comments p {
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+.comment-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  background-color: #fafafa;
+}
+
+.comment-form button {
+  padding: 0.5rem 1rem;
+  background-color: #6a4c93;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #563d7c;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.post-actions button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.post-actions button:first-child {
+  background-color: #4b6584; /* Edit - cool grayish blue */
+  color: #fff;
+}
+
+.post-actions button:first-child:hover {
+  background-color: #3b4f6b;
+}
+
+.post-actions button:last-child {
+  background-color: #eb4d4b; /* Delete - soft red */
+  color: #fff;
+}
+
+.post-actions button:last-child:hover {
+  background-color: #c0392b;
+}

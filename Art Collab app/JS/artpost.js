@@ -55,7 +55,7 @@ function displayPost(post, userData) {
     
     postDiv.innerHTML = `
         <div class="post-header">
-            <img src="${userData.profilePic || 'default-profile.png'}" class="post-user-pic">
+            <img src="${userData.profilePic || 'https://www.mauicardiovascularsymposium.com/wp-content/uploads/2019/08/dummy-profile-pic-300x300.png'}" class="post-user-pic">
             <div>
                 <p class="post-user-name">${userData.name}</p>
                 <p class="post-title">${post.title}</p>
@@ -68,16 +68,6 @@ function displayPost(post, userData) {
         <div class="post-actions">
             <button onclick="editPost('${post.id}')">Edit</button>
             <button onclick="deletePost('${post.id}')">Delete</button>
-        </div>
-
-        <div class="comments-section">
-            <div class="existing-comments" id="comments-${post.id}">
-                ${post.comments?.map(c => `<p><strong>${c.username}</strong>: ${c.text}</p>`).join("") || ""}
-            </div>
-            <div class="comment-form">
-                <input type="text" id="comment-input-${post.id}" placeholder="Add a comment...">
-                <button onclick="addComment('${post.id}')">Comment</button>
-            </div>
         </div>
     `;
 
@@ -98,35 +88,12 @@ window.editPost = (postId) => {
     window.location.href = `edit-post.html?id=${postId}`;
 };
 
-// Add comment
-window.addComment = async (postId) => {
-    const input = document.getElementById(`comment-input-${postId}`);
-    const commentText = input.value.trim();
 
-    if (commentText === "") return;
-
-    const user = auth.currentUser;
-    const userDoc = await getDoc(doc(db, "users", user.uid));
-    const username = userDoc.data().name;
-
-    const comment = {
-        username,
-        text: commentText,
-    };
-
-    const postRef = doc(db, "posts", postId);
-    await updateDoc(postRef, {
-        comments: arrayUnion(comment)
-    });
-
-    const commentContainer = document.getElementById(`comments-${postId}`);
-    commentContainer.innerHTML += `<p><strong>${username}</strong>: ${commentText}</p>`;
-    input.value = "";
-};
 
 document.getElementById("signoutBtn").addEventListener("click", () => {
     signOut(auth)
         .then(() => {
+            alert("You are sign-out successfully...!")
             window.location.href = "index.html";
         })
         .catch((error) => {
