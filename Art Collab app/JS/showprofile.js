@@ -10,5 +10,8 @@ document.getElementById("Email").textContent = artist.email;
 document.getElementById("Bio").textContent = artist.bio || "No bio added";
 document.getElementById("Skills").textContent = artist.skills || "No skills listed";
 document.getElementById("Image").src = artist.profilePic || "https://www.mauicardiovascularsymposium.com/wp-content/uploads/2019/08/dummy-profile-pic-300x300.png";
+document.getElementById("dmBtn").addEventListener("click",()=>{
+    alert("Chat feature Under developing..!")}
+)
 
 

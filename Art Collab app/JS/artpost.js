@@ -8,9 +8,7 @@ import {
     doc,
     getDoc,
     deleteDoc,
-    onAuthStateChanged,
-    updateDoc,
-    arrayUnion,
+    onAuthStateChanged
 } from "./firebase-config.js";
 
 // Reference to post container

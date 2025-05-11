@@ -20,7 +20,6 @@ onAuthStateChanged(auth, async (user) => {
             if (userDocSnap.exists()) {
                 const userData = userDocSnap.data();
 
-                // Update DOM elements
                 document.getElementById("dashboardTitle").textContent = `${userData.name}'s Space`;
                 document.getElementById("dashboardProfilePic").src = userData.profilePic || "https://www.mauicardiovascularsymposium.com/wp-content/uploads/2019/08/dummy-profile-pic-300x300.png";
                 document.getElementById("dashboardSkills").textContent = userData.skills || "No skills added";
