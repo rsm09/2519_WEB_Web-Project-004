@@ -33,8 +33,8 @@ body {
 }
 
 .header-left img {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 120px;
   border-radius: 50%;
   border: 2px solid #c4b5fd;
 }
@@ -43,6 +43,10 @@ body {
   color: #4c1d95;
   text-decoration: underline;
   font-weight: bold;
+}
+
+.header-right{
+  width: 300px;
 }
 
 /* === Container Layout === */

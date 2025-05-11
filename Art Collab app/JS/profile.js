@@ -1,5 +1,5 @@
 // js/profile.js
-import { auth, db, setDoc, doc,getDoc,onAuthStateChanged } from "./firebase-config.js";
+import { auth, db, doc,getDoc,onAuthStateChanged } from "./firebase-config.js";
 
 
 // Listen for auth state

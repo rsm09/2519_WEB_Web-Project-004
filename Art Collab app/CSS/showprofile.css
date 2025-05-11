@@ -55,3 +55,18 @@ h2 {
   font-weight: 500;
   color: #4b5563;
 }
+
+#dmBtn {
+  padding: 10px 20px;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#dmBtn:hover {
+  background-color: #6b21a8;
+}
